@@ -13,7 +13,7 @@ pipeline {
       steps {
                 sh '''
                     echo "Uploading Glue scripts to S3 bucket"
-                    aws s3 cp glue-scripts/* s3://fintech-glue-scripts/ --acl bucket-owner-full-control --include "*.py"
+                    /usr/local/bin/aws s3 cp glue-scripts/* s3://fintech-glue-scripts/ --acl bucket-owner-full-control --include "*.py"
                   '''
             }
      }
